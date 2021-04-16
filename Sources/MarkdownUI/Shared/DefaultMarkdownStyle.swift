@@ -11,7 +11,7 @@ public struct DefaultMarkdownStyle: MarkdownStyle {
         public static let codeFontSizeMultiple: CGFloat = 0.94
         public static let headingFontSizeMultiples: [CGFloat] = [2, 1.5, 1.17, 1, 0.83, 0.67]
         public static let lineSpacing: CGFloat = 0.25
-        public static let maximumLineHeight: CGFloat = 1.0
+        public static let maximumLineHeight: CGFloat = 0.0
         public static let minimumLineHeight: CGFloat = 1.0
     }
 

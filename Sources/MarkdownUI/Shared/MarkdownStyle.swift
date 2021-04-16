@@ -164,8 +164,13 @@ public extension MarkdownStyle {
         
         // make CKJ with Latin characters inline looks better
         paragraphStyle.lineSpacing = lineSpacing * font.pointSize
-        paragraphStyle.maximumLineHeight = maximumLineHeight * font.lineHeight;
-        paragraphStyle.minimumLineHeight = minimumLineHeight * font.lineHeight;
+        // TODO setting maximumLineHeight、minimumLineHeight may influence IMAGE display position
+        if maximumLineHeight > 0 {
+            paragraphStyle.maximumLineHeight = maximumLineHeight * font.pointSize;
+        }
+        if  minimumLineHeight > 0 {
+            paragraphStyle.minimumLineHeight = minimumLineHeight * font.pointSize;
+        }
 
         if paragraphState.isHanging {
             paragraphStyle.headIndent = indent + indentSize
