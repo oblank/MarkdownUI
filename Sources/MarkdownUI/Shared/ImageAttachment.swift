@@ -46,7 +46,7 @@
                 }
 
                 let aspectRatio = image.size.width / image.size.height
-                let width = min(lineFrag.width, image.size.width)
+                let width = lineFrag.width // min(lineFrag.width, image.size.width)
                 let height = width / aspectRatio
 
                 return CGRect(x: 0, y: 0, width: width, height: height)

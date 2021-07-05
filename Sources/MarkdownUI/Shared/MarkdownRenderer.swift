@@ -77,7 +77,6 @@
             ImageDownloader.shared.image(for: url).map { image -> (String, NSTextAttachment) in
                 let attachment = ImageAttachment()
                 attachment.image = image
-
                 return (url.relativeString, attachment)
             }
         }
